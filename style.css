@@ -216,3 +216,60 @@ button.people-entry{width:100%;text-align:left;border-radius:6px}button.people-e
 
 /* One toolbar treatment across map, Documents and detail views. */
 .documents-header-tools,.folder-tools{gap:10px}.documents-header-tools .folder-view-button,.documents-header-tools .sort-button,.documents-header-tools .file-display-button,.folder-tools .folder-view-button,.folder-tools .sort-button,.folder-tools .file-display-button,.in-documents .finder-search-button,.finder-search-button,.structure-picker-button{height:36px;min-height:36px;box-sizing:border-box;border:0;border-radius:7px;background:transparent;padding:5px 8px;display:flex;align-items:center;justify-content:center;gap:7px;color:#73767b}.documents-header-tools .file-display-button,.folder-tools .file-display-button,.in-documents .finder-search-button,.finder-search-button{width:36px;min-width:36px;padding:6px}.documents-header-tools .folder-view-button svg,.folder-tools .folder-view-button svg{height:23px;width:45px;flex:none}.documents-header-tools .sort-button>img,.folder-tools .sort-button>img{width:25px;height:23px;object-fit:contain}.documents-header-tools .file-display-button svg,.folder-tools .file-display-button svg,.structure-picker-button svg{width:23px;height:23px}.documents-header-tools .sort-button>svg,.folder-tools .sort-button>svg{width:10px;height:7px}.finder-search-button svg,.in-documents .finder-search-button svg{width:20px;height:20px}.documents-header-tools .folder-view-button:hover,.documents-header-tools .sort-button:hover,.documents-header-tools .file-display-button:hover,.in-documents .finder-search-button:hover{background:#e2e3e6}.in-documents .finder-search,.finder-search{margin-left:8px}
+
+.imprint-open {
+  position: fixed;
+  z-index: 10;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(10px, env(safe-area-inset-bottom));
+  padding: 5px 10px;
+  border-radius: 7px;
+  color: #202645;
+  background: #f6f6fbea;
+  font: 600 12px Inter, sans-serif;
+}
+.imprint-open:hover { background: white; }
+.imprint-window {
+  width: min(666px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #d6d6df;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 24px 90px #1a253b55;
+}
+.imprint-window::backdrop { background: #222a4244; }
+.imprint-toolbar {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e6e6ec;
+  background: #f2f2f6;
+  font: 600 13px Inter, sans-serif;
+  color: #32333c;
+}
+.imprint-toolbar button {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 50%;
+  background: #ff6059;
+  color: #601611;
+}
+.imprint-copy {
+  padding: clamp(24px, 6vw, 52px);
+  color: #6055a3;
+  font: 400 14px/1.65 Inter, sans-serif;
+}
+.imprint-copy h2 { margin: 0 0 32px; color: inherit; font: 700 27px Inter, sans-serif; }
+.imprint-copy h3 { margin: 0; color: inherit; font-size: inherit; font-weight: 700; }
+.imprint-copy p { margin: 0 0 20px; }
+.imprint-copy a { color: inherit; text-underline-offset: 3px; }
+.imprint-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+@media (max-width: 540px) { .imprint-columns { grid-template-columns: 1fr; gap: 0; } }
